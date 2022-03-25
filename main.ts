@@ -3,10 +3,10 @@ import { Address } from "./classes/address";
 import { Email } from "./classes/email";
 import { Phone } from "./classes/phone";
 
-// Declaración de array de clase Person
+// Declaración de array para almacenamiento de registros
 let agenda: Person[] = [];
 
-// Creación de objetos de clase Person como registro de nuevos contactos e incorporación de los mismos al array "agenda"
+// Creación de objetos de clase Person como nuevos contactos e incorporación de los mismos al array "agenda"
 agenda.push(
   new Person(
     "Francisca",
@@ -55,7 +55,7 @@ agenda.push(
   )
 );
 
-// Función para imprimir agenda por consola
+// Función para imprimir contactos de agenda por consola
 function displayAgenda(agenda: Person[]) {
   console.log(`\n---------------- Imprimiendo contactos\n`);
   for (const contact of agenda) {
@@ -69,7 +69,7 @@ function displayAgenda(agenda: Person[]) {
 
 displayAgenda(agenda);
 
-// Edición de contacto filtrado por DNI para añadir nueva dirección, nuevo telefono y nuevo email.
+// Edición de contacto filtrado por DNI, para añadir nueva dirección, nuevo telefono y nuevo email.
 let findContact = "25152875T";
 agenda
   .filter((contact) => contact.dni === findContact)
